@@ -41,16 +41,18 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const [
-            Text(
-              'there is no weather 😔 start',
-              style: TextStyle(
-                fontSize: 30,
+            Center(
+              child: Text(
+                'there is no weather 😔 start',
+                style: TextStyle(
+                  fontSize: 25,
+                ),
               ),
             ),
             Text(
               'searching now 🔍',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 25,
               ),
             )
           ],
@@ -59,7 +61,7 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(gradient :LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter,colors: [WeatherData!.getThemeColor(),WeatherData!.getThemeColor()[300]!,WeatherData!.getThemeColor()[100]!])),
         // color: WeatherData!.getThemeColor(),
         child: Center(
-          child: Column(
+          child:Column(
 
             mainAxisAlignment: MainAxisAlignment.center,
             children:
@@ -79,7 +81,8 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children:  [
                   Spacer(),
-                  Image.asset(WeatherData!.getImage()),
+                  SizedBox(width: 35,height: 35,
+                      child: Image.asset(WeatherData!.getImage())),
                   Spacer(),
                   Text(
                     WeatherData!.temp.toInt().toString(),style:
@@ -87,24 +90,21 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 32,
                       fontWeight: FontWeight.bold),),
                   Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.only(right:185),
-                    child: Column(
-                      children: [
-                        Text(
-                            'maxTemp: ${WeatherData!.maxTemp.toInt()} ',style:
-                        TextStyle(
-                          fontSize: 32,
-                        )),
-                        Text(
-                            'minTemp: ${WeatherData!.minTemp.toInt()} ',style:
-                        TextStyle(
-                          fontSize: 32,
-                        )),
-                      ],
+                  Column(
+                    children: [
+                      Text(
+                          'maxTemp: ${WeatherData!.maxTemp.toInt()} ',style:
+                      TextStyle(
+                        fontSize: 32,
+                      )),
+                      Text(
+                          'minTemp: ${WeatherData!.minTemp.toInt()} ',style:
+                      TextStyle(
+                        fontSize: 32,
+                      )),
+                    ],
 
 
-                    ),
                   )
 
                 ],)
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.bold),),
             ),
               Spacer(flex:1)
-            ],),
+            ],)
         ),
       ),
     );
