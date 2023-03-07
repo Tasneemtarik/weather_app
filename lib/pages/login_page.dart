@@ -22,7 +22,7 @@ class _loginState extends State<login> {
                 decoration: BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.fill,
-                  image: AssetImage('images/1226618-leaves-in-the-city.jpg')),
+                  image: AssetImage('images/123.jpg')),
             )),
             Positioned(
               child: Center(
