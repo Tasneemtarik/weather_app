@@ -44,7 +44,7 @@ class WeatherModel {
     } else if (weatherstate == 'Light Rain' ||
         weatherstate == 'Heavy rain' ||
         weatherstate == 'Showers' ||
-        weatherstate == 'Patchy rain possible') {
+        weatherstate == 'Patchy rain possible||weatherstate=='Moderate rain') {
       return 'assets/images/rainy.png';
     } else if (weatherstate == 'Thunderstorm' || weatherstate == 'Thunder') {
       return 'assets/images/thunderstorm.png';
@@ -66,7 +66,7 @@ class WeatherModel {
     } else if (weatherstate == 'Light Rain' ||
         weatherstate == 'Heavy rain' ||
         weatherstate == 'Showers' ||
-        weatherstate == 'Patchy rain possible') {
+        weatherstate == 'Patchy rain possible ||weatherstate=='Moderate rain') {
       return Colors.blue;
     } else if (weatherstate == 'Thunderstorm' || weatherstate == 'Thunder') {
       return Colors.blueGrey;
