@@ -68,6 +68,7 @@ flutter:
     - images/1226618-leaves-in-the-city.jpg
     - images/148813-shadow-foliage-park-trees-autumn-light.jpg
     - images/nature.jpg
+    - images/123.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
